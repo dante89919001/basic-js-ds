@@ -25,13 +25,16 @@ const { NotImplementedError } = require('../extensions/index.js');
     if (x.value === k) {
       x.value = x.next.value;
       x.next = x.next.next;
-    } else {
+    } else if(x.next.value ===k){
+      x.next = x.next.next;
+    }
+    else {
       x = x.next;
     }
   }
+
   return l;
 }
-
 module.exports = {
   removeKFromList
 };
