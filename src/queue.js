@@ -20,7 +20,7 @@ const { ListNode } = require('../extensions/list-node.js');
     this.length = 0;
   }
 
-  getUnderlyingList() {
+   getUnderlyingList() {
     return this.top;
   }
 
